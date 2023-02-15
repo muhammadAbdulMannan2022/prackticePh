@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>pracktice</title>
+  </head>
+  <body>
+    <div id="form-page" class="h-screen flex items-center justify-center">
+      <form class="bg-red-400 justify-center items-center p-8 flex flex-col">
+        <h1 class="text-3xl mb-6">login to your account</h1>
+        <input
+          class="my-1 p-1 w-full"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="emaile"
+        />
+        <input
+          class="my-1 p-1 w-full"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+        <button
+          type="submit"
+          class="my-1 bg-green-400 py-1 w-1/3 text-xl rounded"
+          id="submit"
+        >
+          log in
+        </button>
+        <p>
+          if you don't have an account
+          <a class="decoration-sky-500 text-cyan-900 mt-1" href="#">ragistar</a>
+        </p>
+      </form>
+    </div>
+    <div
+      id="bankHome"
+      class="w-full h-screen flex items-center justify-center flex-col gap-5 hidden"
+    >
+      <h1 class="text-3xl mb-3">welcome to __banck__</h1>
+      <div class="flex w-1/2 justify-around gap-1">
+        <div class="text-center uppercase bg-green-400 p-3 rounded w-1/3">
+          <h1>deposit</h1>
+          <h1>$<span id="deposit">00</span></h1>
+        </div>
+        <div class="text-center uppercase bg-yellow-400 p-3 rounded w-1/3">
+          <h1>withdraw</h1>
+          <h1>$<span id="withdraw">00</span></h1>
+        </div>
+        <div class="text-center uppercase bg-cyan-400 p-3 rounded w-1/3">
+          <h1>total muny</h1>
+          <h1>$<span id="total">00</span></h1>
+        </div>
+      </div>
+      <div class="inputs flex w-4/5 justify-between gap-1">
+        <div
+          class="inpDeposit flex flex-1 flex-col p-2 bg-green-400 rounded-xl"
+        >
+          <h2 class="text-xl mb-3">add muny in account</h2>
+          <input
+            class="p-1"
+            placeholder="input the ammunt to add"
+            type="number"
+            id="inpDeposit"
+            min="1"
+          />
+          <button
+            id="depositBtn"
+            class="text-center p-1 rounded mt-5 mb-3 bg-blue-400 w-1/4"
+          >
+            deposit
+          </button>
+        </div>
+        <div class="withdrawInp flex flex-1 flex-col p-2 bg-red-400 rounded-xl">
+          <h2 class="text-xl mb-3">withdraw muny form account</h2>
+          <input
+            class="p-1"
+            placeholder="input the ammunt to withdraw"
+            type="number"
+            id="withdrawInp"
+            min="1"
+          />
+          <button
+            id="withdrawBtn"
+            class="text-center p-1 rounded mt-5 mb-3 bg-blue-400 w-1/4"
+          >
+            withdraw
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

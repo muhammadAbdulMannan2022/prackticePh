@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>discount calculator</title>
+  </head>
+  <body
+    class="flex items-center justify-center bg-red-300"
+    style="width: 100%; height: 100vh"
+  >
+    <div
+      class="container flex items-center justify-around w-4/5 p-5 gap-3 bg-green-300"
+    >
+      <div class="w-1/2 p-5 text-start bg-slate-300">
+        <h1 class="text-2xl">head phone</h1>
+        <p class="my-1">Lorem ipsum dolor sit amet.</p>
+        <img class="w-1/2" src="./img.jpg" alt="headphone image" />
+        <!-- line-through text-red-600 class to add -->
+        <p class="text-xl">price $<span id="price">300</span></p>
+        <!-- class to remove -->
+        <p class="text-xl hidden">
+          discount price $<span id="discountPrice"></span>
+        </p>
+      </div>
+      <div class="w-1/3">
+        <p class="text-3xl mb-3">use promocode for discount</p>
+        <input
+          class="p-1 w-full"
+          placeholder="promocode"
+          type="text"
+          name="promocode"
+          id="promocode"
+        />
+        <button
+          id="button"
+          class="bg-gray-800 text-white p-2 w-24 text-2xl rounded mt-5"
+        >
+          use
+        </button>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
